@@ -18,7 +18,10 @@ def main():
             w.write('date, ssid, download, upload, ping\n')
     with open(name, 'a+') as w:
         while True:
-            ssid = subprocess.check_output(SSID_CMD, shell=True).decode('utf8').strip()
+            try:
+                ssid = subprocess.check_output(SSID_CMD, shell=True).decode('utf8').strip()
+            except:  # if it's not a mac.
+                ssid = 'N/A'
             now = datetime.datetime.now()
             output_cli = subprocess.check_output('speedtest-cli --json', shell=True)
             results = json.loads(output_cli.decode('utf8'))
