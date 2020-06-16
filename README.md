@@ -8,7 +8,7 @@ Record your internet speed at fixed intervals.
   <i>Download speed</i>
 </p>
 
-
+<br/><br/>
 
 <p align="center">
   <img width="400" src="img/Upload.png"><br/>
